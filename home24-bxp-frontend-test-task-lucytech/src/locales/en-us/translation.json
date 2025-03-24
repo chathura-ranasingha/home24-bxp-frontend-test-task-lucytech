@@ -1,0 +1,24 @@
+{
+  "common": {},
+  "mainLayout": {
+    "siteTitle": " home24 BXP Back Office",
+    "Logout": "Logout"
+  },
+  "login": {
+    "login": "Log in",
+    "username": "User Name",
+    "password": "Password",
+    "validations": {
+      "email": "Please enter your email!",
+      "password": "Please enter your password!"
+    }
+  },
+  "NotFound": {
+    "backToDashboard": "Back to Dashboard"
+  },
+  "Dashboard": {
+    "NoProductFound": "No Product Found",
+    "name": "Name",
+    "Attributes": "Attributes"
+  }
+}

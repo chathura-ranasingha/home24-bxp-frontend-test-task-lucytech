@@ -1,0 +1,294 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin@example.com"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "parent_id": null,
+      "name": "Electronics"
+    },
+    {
+      "id": "2",
+      "parent_id": 1,
+      "name": "Mobile Phones"
+    },
+    {
+      "id": "3",
+      "parent_id": 2,
+      "name": "Smartphones"
+    },
+    {
+      "id": "4",
+      "parent_id": 1,
+      "name": "Laptops"
+    },
+    {
+      "id": "5",
+      "parent_id": null,
+      "name": "Home Appliances"
+    },
+    {
+      "id": "6",
+      "parent_id": 5,
+      "name": "Refrigerators"
+    },
+    {
+      "id": "7",
+      "parent_id": 5,
+      "name": "Washing Machines"
+    },
+    {
+      "id": "8",
+      "parent_id": null,
+      "name": "Fashion"
+    },
+    {
+      "id": "9",
+      "parent_id": 8,
+      "name": "Men's Clothing"
+    },
+    {
+      "id": "10",
+      "parent_id": 9,
+      "name": "T-Shirts"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 14",
+      "category_id": 3,
+      "attributes": [
+        {
+          "value": "Black5"
+        },
+        {
+          "value": "256GB"
+        },
+        {
+          "value": "false"
+        },
+        {
+          "code": "Brand New ",
+          "value": "Yes"
+        }
+      ],
+      "price": 1000,
+      "image_url": "https://images.unsplash.com/photo-1697898706719-bce6e007c817?q=80",
+      "description": "The iPhone 14 is equipped with a powerful A15 Bionic chip, a stunning 6.1-inch display, and an advanced dual-camera system. It's water-resistant and available in multiple color options.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S23",
+      "category_id": 3,
+      "attributes": [
+        {
+          "code": "colors",
+          "value": "Phantom greens"
+        },
+        {
+          "code": "sizes",
+          "value": "128TB"
+        }
+      ],
+      "price": 3000,
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "Samsung Galaxy S23 with a powerful A15 Bionic chip, a stunning 6.1-inch display, and an advanced dual-camera system. It's water-resistant and available in multiple color options.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Google Pixel 7",
+      "category_id": 3,
+      "attributes": [
+        {
+          "code": "colors",
+          "value": "Stormy Black"
+        },
+        {
+          "code": "storages",
+          "value": "128GB"
+        },
+        {
+          "code": "is_waterproof",
+          "value": true
+        }
+      ],
+      "price": 1320,
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "Google Pixel 7 offers an excellent camera experience with clean Android features, a powerful chipset, and a 6.3-inch OLED display, all packed in a premium design.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "4",
+      "name": "OnePlus 11",
+      "category_id": 3,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Titanium Black"
+        },
+        {
+          "code": "storage",
+          "value": "256GB"
+        },
+        {
+          "code": "is_waterproof",
+          "value": true
+        }
+      ],
+      "price": 1320,
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "OnePlus 11 delivers a fantastic flagship experience with its powerful Snapdragon 8 Gen 2 chip, 6.7-inch Fluid AMOLED display, and an impressive triple-camera system.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "5",
+      "name": "MacBook Pro 16-inch",
+      "category_id": 4,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Space Gray"
+        },
+        {
+          "code": "storage",
+          "value": "1TB"
+        },
+        {
+          "code": "processor",
+          "value": "M1 Max"
+        }
+      ],
+      "price": 1320,
+      "image_url": "https://media.istockphoto.com/id/1478610778/photo/hcmc-vietnam-macbook-pro-14-inches-m2.jpg?s=2048x2048&w=is&k=20&c=791SIIqmOvZCE2TcP0zAXIJxv5BDUJ3K-oRIAwRSmNo=",
+      "description": "The MacBook Pro 16-inch with the M1 Max processor is built for pro users, featuring a stunning Retina display, ample storage, and exceptional performance for heavy tasks.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "6",
+      "name": "Dell XPS 13",
+      "category_id": 4,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Platinum Silver"
+        },
+        {
+          "code": "storage",
+          "value": "512GB"
+        },
+        {
+          "code": "processor",
+          "value": "Intel Core i7"
+        }
+      ],
+      "price": 2320,
+      "image_url": "https://media.istockphoto.com/id/1362775637/photo/modern-new-office-black-laptop-on-white-background-front-view.jpg?s=2048x2048&w=is&k=20&c=Zx3C0kOrBOvQJVgFfD5K2rYjYyNMOla4AeU2LbKu58o=",
+      "description": "The Dell XPS 13 offers a premium ultra-thin design, Intel Core i7 processor, and a stunning InfinityEdge display for work and play.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "7",
+      "name": "HP Spectre x360",
+      "category_id": 4,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Nightfall Black"
+        },
+        {
+          "code": "storage",
+          "value": "512GB"
+        },
+        {
+          "code": "processor",
+          "value": "Intel Core i7"
+        }
+      ],
+      "price": 22320,
+      "image_url": "https://media.istockphoto.com/id/493247997/photo/hp-world-headquarters.jpg?s=2048x2048&w=is&k=20&c=GHll5yn7cn8S8bSxubIXGQ59cUh6va_vks8yRtAZz0g=",
+      "description": "HP Spectre x360 combines performance and style with a 13.3-inch 4K OLED touch display, Intel Core i7 processor, and a 360-degree convertible design.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "8",
+      "name": "Whirlpool Refrigerator",
+      "category_id": 6,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Stainless Steel"
+        },
+        {
+          "code": "capacity",
+          "value": "500L"
+        },
+        {
+          "code": "energy_rating",
+          "value": "A++"
+        }
+      ],
+      "price": 320,
+      "image_url": "https://media.istockphoto.com/id/842160124/photo/refrigerator-with-fruits-and-vegetables.jpg?s=2048x2048&w=is&k=20&c=331H5haF6Xi4sD0N1dIrpsHSK6VfzS3Ohd2SQuTB3xc=",
+      "description": "The Whirlpool Refrigerator features a 500L capacity with advanced cooling technology and an A++ energy rating for efficiency and freshness.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "9",
+      "name": "Samsung Washing Machine",
+      "category_id": 7,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "White"
+        },
+        {
+          "code": "capacity",
+          "value": "8kg"
+        },
+        {
+          "code": "energy_rating",
+          "value": "A++"
+        }
+      ],
+      "price": 720,
+      "image_url": "https://media.istockphoto.com/id/1463361334/photo/washing-machine.jpg?s=2048x2048&w=is&k=20&c=OYJgRtOFgoquBmodzTn90dPUWb8nxbA6QTbFbCklAYU=",
+      "description": "Samsung Washing Machine offers an 8kg capacity with advanced washing technology, energy-efficient operation, and a sleek white design.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    },
+    {
+      "id": "10",
+      "name": "Nike T-Shirt",
+      "category_id": 10,
+      "attributes": [
+        {
+          "code": "Color",
+          "value": "Black"
+        },
+        {
+          "code": "size",
+          "value": "L"
+        },
+        {
+          "code": "material",
+          "value": "Cotton"
+        },
+        {
+          "code": "gender",
+          "value": "men"
+        }
+      ],
+      "price": 1720,
+      "image_url": "https://media.istockphoto.com/id/1215542092/photo/portrait-of-smiling-young-man-in-a-white-t-shirt-isolated-on-white-background.jpg?s=2048x2048&w=is&k=20&c=vAZ030TsUPGThuxp7ppFZ-Ikilu2c0RjENGv1JlHc_o=",
+      "description": "Nike T-Shirt made of high-quality cotton, designed for comfort and style, perfect for casual wear and sports.",
+      "last_modified": "2024-03-23T12:00:00Z"
+    }
+  ]
+}

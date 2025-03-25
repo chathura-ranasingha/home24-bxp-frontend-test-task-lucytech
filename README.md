@@ -32,7 +32,7 @@ npm start
 
 ### Accessing the App
 After running the above commands:
-- Open your browser and go to `http://localhost:3000/`
+- Open your browser and go to `http://localhost:5173/`
 - Use the following credentials to log in:
   - **Username:** `admin@example.com`
   - **Password:** `password`

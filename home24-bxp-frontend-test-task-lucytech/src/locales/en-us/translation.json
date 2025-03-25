@@ -2,7 +2,8 @@
   "common": {},
   "mainLayout": {
     "siteTitle": " home24 BXP Back Office",
-    "Logout": "Logout"
+    "Logout": "Logout",
+    "Select Language": "Select Language"
   },
   "login": {
     "login": "Log in",
@@ -20,5 +21,19 @@
     "NoProductFound": "No Product Found",
     "name": "Name",
     "Attributes": "Attributes"
+  },
+  "ProductDetails": {
+    "NoProductFound": "No Product Found",
+    "Attributes": "Attributes",
+    "Add Attributes": "Add Attributes",
+    "Add New Attributes": "Add New Attributes",
+    "Save Attributes": "Save Attributes",
+    "Edit Attributes": "Edit Attributes"
+  },
+  "LastModifiedCustomWidets": {
+    "Last Modified Product": "Last Modified Product",
+    "Price": "Price",
+    "Last Modified": "Last Modified",
+    "No products found": "No products found."
   }
 }

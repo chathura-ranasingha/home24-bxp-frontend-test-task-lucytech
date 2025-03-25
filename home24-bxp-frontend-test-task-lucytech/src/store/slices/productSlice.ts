@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
+  getLastModifiedProductApi,
   getProductsApi,
   updateProductApi,
 } from "../../services/api/product-api.service";
@@ -14,6 +15,7 @@ const initialState: ProductState = {
   pageSize: 10,
   sortBy: "id",
   isDesc: false,
+  last_modified: null,
 };
 
 export const getProducts = createAsyncThunk(
@@ -47,11 +49,28 @@ export const updateProduct = createAsyncThunk(
   "product/updateProduct",
   async (product: Product, { rejectWithValue }) => {
     try {
+      product.last_modified = new Date().getTime();
+
       const response = await updateProductApi(product);
+
       return response.data;
     } catch (error: any) {
       return rejectWithValue("Failed to update product");
     }
+  }
+);
+
+export const getLastModifiedProduct = createAsyncThunk(
+  "product/getLastModifiedProduct",
+  async () => {
+    const response = await getLastModifiedProductApi();
+
+    return [
+      response.data.sort(
+        (a: Product, b: Product) => b.last_modified - a.last_modified
+      )[0],
+    ];
+    return response.data;
   }
 );
 
@@ -80,7 +99,6 @@ const productSlice = createSlice({
         state.totalCount = action.payload.length;
         state.error = null;
       })
-
       .addCase(getProducts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string;
@@ -97,11 +115,17 @@ const productSlice = createSlice({
         if (index !== -1) {
           state.products[index] = updatedProduct;
         }
+        state.last_modified = updatedProduct;
+
         state.error = null;
       })
+
       .addCase(updateProduct.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string;
+      })
+      .addCase(getLastModifiedProduct.fulfilled, (state, action) => {
+        state.last_modified = action.payload;
       });
   },
 });

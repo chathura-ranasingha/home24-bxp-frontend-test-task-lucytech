@@ -14,6 +14,9 @@ export interface Product {
   name: string;
   category_id: any;
   attributes: AttributeValue[];
+  image_url: string;
+  price: number;
+  last_modified: number;
 }
 
 export interface ProductState {
@@ -25,6 +28,7 @@ export interface ProductState {
   pageSize: number;
   sortBy: "id" | "name";
   isDesc: boolean;
+  last_modified: Product | null;
 }
 
 export interface AuthState {

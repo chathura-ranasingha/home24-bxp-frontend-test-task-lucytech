@@ -21,7 +21,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { DEFAULT_i18_NAMESPACE } from "../constant/constant";
 import { Category } from "../types/types";
-
+import LastModifiedProduct from "../components/widgets/LastModifiedProduct";
 const { Sider, Content } = Layout;
 const { Option } = Select;
 
@@ -140,6 +140,7 @@ const Dashboard = () => {
             background: "#fff",
           }}
         >
+          <LastModifiedProduct />
           {productLoading ? (
             <Spin tip="Loading products..." />
           ) : (

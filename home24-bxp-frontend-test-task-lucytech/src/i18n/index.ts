@@ -8,7 +8,7 @@ import locales from "./locales.ts";
 
 i18n.use(initReactI18next).init({
   resources: locales,
-  lng: camelCase(import.meta.env.VITE_LOCALE),
+  lng: camelCase(localStorage.getItem("language") || "enUs"),
 
   interpolation: {
     escapeValue: false,

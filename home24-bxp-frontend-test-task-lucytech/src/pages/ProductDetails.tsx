@@ -11,16 +11,22 @@ import Form from "../components/ui/app-form-component";
 import Input from "../components/ui/app-input-component";
 import { Category } from "../types/types";
 import { AppDispatch } from "../store";
+import { useTranslation } from "react-i18next";
+import { DEFAULT_i18_NAMESPACE } from "../constant/constant";
 
 const { Sider } = Layout;
 
 const ProductDetails = () => {
+  const { t } = useTranslation(DEFAULT_i18_NAMESPACE, {
+    keyPrefix: "ProductDetails",
+  });
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const products = useSelector((state: any) => state.product.products || []);
+
   const product =
-    products.length > 0
+    id && products.length > 0
       ? products.find((p: any) => Number(p.id) === Number(id))
       : null;
 
@@ -41,14 +47,12 @@ const ProductDetails = () => {
     categories: Category[] = [],
     parentId: string | null = null
   ): any[] => {
-
-
     return categories
-      .filter((category) => String(category.parent_id) === String(parentId)) // Ensure type consistency
+      .filter((category) => String(category.parent_id) === String(parentId))
       .map((category) => ({
         title: category.name,
         key: category.id,
-        children: renderTreeData(categories, String(category.id)), // Pass ID as string
+        children: renderTreeData(categories, String(category.id)),
       }));
   };
 
@@ -63,13 +67,10 @@ const ProductDetails = () => {
         attributes: values.attributes,
       };
 
-      // Dispatch the update product action
       dispatch(updateProduct(updatedProduct));
 
-      // Show a success message
       message.success("Product attributes updated successfully");
 
-      // Exit edit mode (set editableAttributes to empty)
       setEditableAttributes([]);
     } catch (error) {
       message.error("Failed to update product attributes");
@@ -83,10 +84,8 @@ const ProductDetails = () => {
         attributes: [...product?.attributes, newAttribute],
       };
 
-      // Dispatch the update product action with new attribute added
       dispatch(updateProduct(updatedProduct));
 
-      // Reset the new attribute form
       setNewAttribute({ code: "", value: "" });
 
       message.success("New attribute added successfully");
@@ -96,7 +95,7 @@ const ProductDetails = () => {
   };
 
   if (!product) {
-    return <h3>Product not found</h3>;
+    return <h3>{t("NoProductFound")}</h3>;
   }
 
   return (
@@ -117,7 +116,7 @@ const ProductDetails = () => {
                 <Button
                   type="link"
                   size="small"
-                  onClick={() => navigate(-1)} // Navigate back
+                  onClick={() => navigate(-1)}
                   style={{ padding: 0, marginBottom: 8 }}
                 >
                   <ArrowLeftOutlined style={{ fontSize: 16 }} />{" "}
@@ -142,10 +141,8 @@ const ProductDetails = () => {
                   <strong>Price:</strong> ${product.price}
                 </p>
 
-                {/* Display existing attributes */}
-                {/* Display existing attributes */}
                 <div>
-                  <strong>Attributes:</strong>
+                  <strong>{t("Attributes")}:</strong>
                   <ul style={{ listStyle: "none", padding: 0 }}>
                     {product.attributes.map((attr: any) => (
                       <li
@@ -167,17 +164,11 @@ const ProductDetails = () => {
                   </ul>
                 </div>
 
-                {/* Button to enable attribute editing */}
-                {/* Button to enable attribute editing */}
                 {editableAttributes.length === 0 && (
                   <Button onClick={handleEditAttributes}>
-                    Edit Attributes
+                    {t("Edit Attributes")}
                   </Button>
                 )}
-
-                {/* Editable Attributes Section */}
-                {/* Editable Attributes Section */}
-                {/* Editable Attributes Section */}
                 {editableAttributes.length > 0 && (
                   <Form
                     initialValues={{
@@ -188,7 +179,6 @@ const ProductDetails = () => {
                     {editableAttributes.map((attr: any, index: number) => (
                       <Form.Item key={index}>
                         <Row gutter={16} align="middle">
-                          {/* Code (Editable) Column */}
                           <Col span={6}>
                             <Form.Item
                               name={["attributes", index, "code"]}
@@ -204,7 +194,6 @@ const ProductDetails = () => {
                             </Form.Item>
                           </Col>
 
-                          {/* Input Field Column */}
                           <Col span={12}>
                             <Form.Item
                               name={["attributes", index, "value"]}
@@ -227,15 +216,14 @@ const ProductDetails = () => {
                     ))}
                     <Form.Item>
                       <Button type="primary" htmlType="submit">
-                        Save Attributes
+                        {t("Save Attributes")}
                       </Button>
                     </Form.Item>
                   </Form>
                 )}
 
-                {/* Add New Attribute Section */}
                 <div style={{ marginTop: 20 }}>
-                  <strong>Add New Attribute:</strong>
+                  <strong>{t("Add New Attributes")}:</strong>
                   <Form
                     layout="inline"
                     style={{ marginTop: 10 }}
@@ -279,7 +267,7 @@ const ProductDetails = () => {
 
                     <Form.Item>
                       <Button type="primary" htmlType="submit">
-                        Add Attribute
+                        {t("Add Attributes")}
                       </Button>
                     </Form.Item>
                   </Form>

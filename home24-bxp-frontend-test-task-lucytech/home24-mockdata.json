@@ -3,7 +3,8 @@
     {
       "id": "1",
       "email": "admin@example.com",
-      "password": "admin@example.com"
+      "password": "admin@example.com",
+      "profile_pic": "https://media.licdn.com/dms/image/v2/C5603AQH-YrWCm6ygSQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650942551752?e=1748476800&v=beta&t=jGd0XBrRsevx2HIrUFR0SUwaylD6LeW6dcV0a0OhbgI"
     }
   ],
   "categories": [
@@ -65,23 +66,30 @@
       "category_id": 3,
       "attributes": [
         {
+          "code": "Color",
           "value": "Black5"
         },
         {
+          "code": "size",
           "value": "256GB"
         },
         {
-          "value": "false"
+          "code": "used",
+          "value": "no"
         },
         {
           "code": "Brand New ",
-          "value": "Yes"
+          "value": "NO"
+        },
+        {
+          "code": "Price",
+          "value": "2992"
         }
       ],
       "price": 1000,
       "image_url": "https://images.unsplash.com/photo-1697898706719-bce6e007c817?q=80",
       "description": "The iPhone 14 is equipped with a powerful A15 Bionic chip, a stunning 6.1-inch display, and an advanced dual-camera system. It's water-resistant and available in multiple color options.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742919147869
     },
     {
       "id": "2",
@@ -100,7 +108,7 @@
       "price": 3000,
       "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
       "description": "Samsung Galaxy S23 with a powerful A15 Bionic chip, a stunning 6.1-inch display, and an advanced dual-camera system. It's water-resistant and available in multiple color options.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742912400327
     },
     {
       "id": "3",
@@ -123,7 +131,7 @@
       "price": 1320,
       "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
       "description": "Google Pixel 7 offers an excellent camera experience with clean Android features, a powerful chipset, and a 6.3-inch OLED display, all packed in a premium design.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742911583295
     },
     {
       "id": "4",
@@ -146,7 +154,7 @@
       "price": 1320,
       "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
       "description": "OnePlus 11 delivers a fantastic flagship experience with its powerful Snapdragon 8 Gen 2 chip, 6.7-inch Fluid AMOLED display, and an impressive triple-camera system.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742911657616
     },
     {
       "id": "5",
@@ -169,7 +177,7 @@
       "price": 1320,
       "image_url": "https://media.istockphoto.com/id/1478610778/photo/hcmc-vietnam-macbook-pro-14-inches-m2.jpg?s=2048x2048&w=is&k=20&c=791SIIqmOvZCE2TcP0zAXIJxv5BDUJ3K-oRIAwRSmNo=",
       "description": "The MacBook Pro 16-inch with the M1 Max processor is built for pro users, featuring a stunning Retina display, ample storage, and exceptional performance for heavy tasks.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742912411148
     },
     {
       "id": "6",
@@ -192,7 +200,7 @@
       "price": 2320,
       "image_url": "https://media.istockphoto.com/id/1362775637/photo/modern-new-office-black-laptop-on-white-background-front-view.jpg?s=2048x2048&w=is&k=20&c=Zx3C0kOrBOvQJVgFfD5K2rYjYyNMOla4AeU2LbKu58o=",
       "description": "The Dell XPS 13 offers a premium ultra-thin design, Intel Core i7 processor, and a stunning InfinityEdge display for work and play.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742911719273
     },
     {
       "id": "7",
@@ -210,12 +218,16 @@
         {
           "code": "processor",
           "value": "Intel Core i7"
+        },
+        {
+          "code": "processor",
+          "value": "Intel Core i7"
         }
       ],
       "price": 22320,
       "image_url": "https://media.istockphoto.com/id/493247997/photo/hp-world-headquarters.jpg?s=2048x2048&w=is&k=20&c=GHll5yn7cn8S8bSxubIXGQ59cUh6va_vks8yRtAZz0g=",
       "description": "HP Spectre x360 combines performance and style with a 13.3-inch 4K OLED touch display, Intel Core i7 processor, and a 360-degree convertible design.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "last_modified": 1742911684357
     },
     {
       "id": "8",
@@ -236,13 +248,13 @@
         }
       ],
       "price": 320,
-      "image_url": "https://media.istockphoto.com/id/842160124/photo/refrigerator-with-fruits-and-vegetables.jpg?s=2048x2048&w=is&k=20&c=331H5haF6Xi4sD0N1dIrpsHSK6VfzS3Ohd2SQuTB3xc=",
-      "description": "The Whirlpool Refrigerator features a 500L capacity with advanced cooling technology and an A++ energy rating for efficiency and freshness.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "Whirlpool Refrigerator offers energy efficiency with a large capacity and fresh food preservation technology, perfect for families.",
+      "last_modified": 1742911737841
     },
     {
       "id": "9",
-      "name": "Samsung Washing Machine",
+      "name": "LG Washing Machine",
       "category_id": 7,
       "attributes": [
         {
@@ -255,40 +267,266 @@
         },
         {
           "code": "energy_rating",
-          "value": "A++"
+          "value": "A+++"
         }
       ],
-      "price": 720,
-      "image_url": "https://media.istockphoto.com/id/1463361334/photo/washing-machine.jpg?s=2048x2048&w=is&k=20&c=OYJgRtOFgoquBmodzTn90dPUWb8nxbA6QTbFbCklAYU=",
-      "description": "Samsung Washing Machine offers an 8kg capacity with advanced washing technology, energy-efficient operation, and a sleek white design.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "price": 250,
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "LG Washing Machine offers powerful washing technology, energy efficiency, and a 6 motion direct drive system for optimal fabric care.",
+      "last_modified": 1742911602784
     },
     {
       "id": "10",
-      "name": "Nike T-Shirt",
-      "category_id": 10,
+      "name": "Samsung Smart Fridge",
+      "category_id": 6,
+      "attributes": [
+        {
+          "code": "color",
+          "value": "Black"
+        },
+        {
+          "code": "capacity",
+          "value": "400L"
+        },
+        {
+          "code": "features",
+          "value": "Smart Touchscreen, Wi-Fi enabled"
+        }
+      ],
+      "price": 990,
+      "image_url": "https://media.istockphoto.com/id/1301140207/photo/modern-mobile-phone-mockup-with-sample-home-screen-visual-design.jpg?s=2048x2048&w=is&k=20&c=Bqd9oLbG7aHCaC21WuUrcIxgWhfiBpozhrOYOyxChao=",
+      "description": "The Samsung Smart Fridge features a built-in touchscreen for smart features and Wi-Fi connectivity, helping you manage groceries efficiently.",
+      "last_modified": 1742912647285
+    },
+    {
+      "id": "11",
+      "name": "Sony Bravia 55\" 4K TV",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Resolution",
+          "value": "4K"
+        },
+        {
+          "code": "Screen Size",
+          "value": "55\""
+        },
+        {
+          "code": "Smart TV",
+          "value": "Yes"
+        }
+      ],
+      "price": 700,
+      "image_url": "https://media.istockphoto.com/id/625792410/photo/cee-2016-exhibition-of-electronics-in-kiev-ukraine.jpg?s=612x612&w=0&k=20&c=SOEvE6fb1JxaiXqD5megbirK-Nm4ExP2G5BgSsFcKiY=",
+      "description": "Sony Bravia 55\" 4K TV offers stunning picture quality with HDR, Android TV OS, and built-in Google Assistant.",
+      "last_modified": 1742914231245
+    },
+    {
+      "id": "12",
+      "name": "Bose QuietComfort 45 Headphones",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Noise Cancelling",
+          "value": "Yes"
+        },
+        {
+          "code": "Color",
+          "value": "Black"
+        },
+        {
+          "code": "Battery Life",
+          "value": "24 hours"
+        }
+      ],
+      "price": 350,
+      "image_url": "https://media.istockphoto.com/id/1412240771/photo/headphones-on-white-background.jpg?s=612x612&w=0&k=20&c=DwpnlOcMzclX8zJDKOMSqcXdc1E7gyGYgfX5Xr753aQ=",
+      "description": "Bose QuietComfort 45 offers world-class noise-canceling technology, crystal-clear sound, and long-lasting comfort.",
+      "last_modified": 1742914748439
+    },
+    {
+      "id": "13",
+      "name": "Nikon D850 DSLR Camera",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Resolution",
+          "value": "45.7 MP"
+        },
+        {
+          "code": "Sensor Type",
+          "value": "Full-frame"
+        },
+        {
+          "code": "Video Recording",
+          "value": "4K UHD"
+        }
+      ],
+      "price": 3000,
+      "image_url": "https://media.istockphoto.com/id/157292245/photo/camera-slr.jpg?s=612x612&w=0&k=20&c=ptR21pA7cRUTDHnIXwHf1K7W27ZzZgvTPK3Zb_zzwNE=",
+      "description": "The Nikon D850 delivers exceptional photo quality with a 45.7 MP full-frame sensor, advanced 4K video capabilities, and incredible detail.",
+      "last_modified": 1742914536752
+    },
+    {
+      "id": "14",
+      "name": "Fitbit Charge 5",
+      "category_id": 1,
       "attributes": [
         {
           "code": "Color",
           "value": "Black"
         },
         {
-          "code": "size",
-          "value": "L"
+          "code": "Battery Life",
+          "value": "7 days"
         },
         {
-          "code": "material",
-          "value": "Cotton"
-        },
-        {
-          "code": "gender",
-          "value": "men"
+          "code": "Water Resistance",
+          "value": "50m"
         }
       ],
-      "price": 1720,
-      "image_url": "https://media.istockphoto.com/id/1215542092/photo/portrait-of-smiling-young-man-in-a-white-t-shirt-isolated-on-white-background.jpg?s=2048x2048&w=is&k=20&c=vAZ030TsUPGThuxp7ppFZ-Ikilu2c0RjENGv1JlHc_o=",
-      "description": "Nike T-Shirt made of high-quality cotton, designed for comfort and style, perfect for casual wear and sports.",
-      "last_modified": "2024-03-23T12:00:00Z"
+      "price": 150,
+      "image_url": "https://media.istockphoto.com/id/609824764/photo/fitbit-charge-2-activity-and-sleep-tracker-stock-image.jpg?s=2048x2048&w=is&k=20&c=CwevbZCruz_XGSZdTNoWyNJb8rjYWTR-OXSIZizKVFM=",
+      "description": "Fitbit Charge 5 tracks your activity, heart rate, sleep, and more with a sleek and comfortable design.",
+      "last_modified": 1742914452952
+    },
+    {
+      "id": "15",
+      "name": "Canon EOS R6 Mirrorless Camera",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Resolution",
+          "value": "20.1 MP"
+        },
+        {
+          "code": "Sensor Type",
+          "value": "Full-frame"
+        },
+        {
+          "code": "Video Recording",
+          "value": "4K"
+        }
+      ],
+      "price": 2500,
+      "image_url": "https://media.istockphoto.com/id/1500035754/photo/digital-compact-and-action-cameras-and-equipment-on-black-wooden-plank-table-top-view.jpg?s=612x612&w=0&k=20&c=EVlYLxkSkSDX2EgPaFMOsKYVhukFd_d1wv7tiLAwQrs=",
+      "description": "Canon EOS R6 offers professional-grade image and video capabilities with a 20.1 MP full-frame sensor and 4K recording.",
+      "last_modified": 1742914739805
+    },
+    {
+      "id": "16",
+      "name": "Microsoft Surface Pro 8",
+      "category_id": 4,
+      "attributes": [
+        {
+          "code": "Screen Size",
+          "value": "13-inch"
+        },
+        {
+          "code": "Storage",
+          "value": "256GB"
+        },
+        {
+          "code": "Processor",
+          "value": "Intel Core i7"
+        }
+      ],
+      "price": 1200,
+      "image_url": "https://media.istockphoto.com/id/506132272/photo/front-view-of-microsoft-surface-pro-4-with-type-cover.jpg?s=612x612&w=0&k=20&c=vs6KBVHizLPnw395Kjlq-flfWwxVcIJf4x6McPUW1PA=",
+      "description": "Microsoft Surface Pro 8 offers a powerful 13-inch touchscreen, Intel Core i7 processor, and ample storage, ideal for work and play.",
+      "last_modified": 1742914714911
+    },
+    {
+      "id": "17",
+      "name": "Apple Watch Series 7",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Size",
+          "value": "41mm"
+        },
+        {
+          "code": "Color",
+          "value": "Green"
+        },
+        {
+          "code": "Features",
+          "value": "Blood Oxygen, ECG"
+        }
+      ],
+      "price": 400,
+      "image_url": "https://media.istockphoto.com/id/498433288/photo/apple-watch-sport-42mm-silver-aluminum-case-with-black-band.jpg?s=612x612&w=0&k=20&c=FCxCLZ2jq3zWlg7zwQEHqsYGUZ_6_yVMhgfE8cqGbNM=",
+      "description": "Apple Watch Series 7 offers advanced health tracking, fitness features, and a stunning 41mm Retina display.",
+      "last_modified": 1742914707124
+    },
+    {
+      "id": "18",
+      "name": "JBL Flip 5 Bluetooth Speaker",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Color",
+          "value": "Black"
+        },
+        {
+          "code": "Battery Life",
+          "value": "12 hours"
+        },
+        {
+          "code": "Waterproof",
+          "value": "Yes"
+        }
+      ],
+      "price": 120,
+      "image_url": "https://media.istockphoto.com/id/852550808/photo/bluetooth-speaker-connected-with-mobile-phone.jpg?s=2048x2048&w=is&k=20&c=FASLvhEfrJ1FtEKOB0DzkwzCmRk_f5fImgUzsuDnCnk=",
+      "description": "JBL Flip 5 delivers powerful sound, deep bass, and a waterproof design for an unbeatable listening experience.",
+      "last_modified": 1742914681872
+    },
+    {
+      "id": "19",
+      "name": "Bose SoundLink Revolve+ Bluetooth Speaker",
+      "category_id": 1,
+      "attributes": [
+        {
+          "code": "Color",
+          "value": "Silver"
+        },
+        {
+          "code": "Battery Life",
+          "value": "16 hours"
+        },
+        {
+          "code": "Waterproof",
+          "value": "Yes"
+        }
+      ],
+      "price": 299,
+      "image_url": "https://media.istockphoto.com/id/852550808/photo/bluetooth-speaker-connected-with-mobile-phone.jpg?s=2048x2048&w=is&k=20&c=FASLvhEfrJ1FtEKOB0DzkwzCmRk_f5fImgUzsuDnCnk=",
+      "description": "Bose SoundLink Revolve+ offers rich 360-degree sound, deep bass, and rugged design, perfect for any outdoor adventure.",
+      "last_modified": 1742914699840
+    },
+    {
+      "id": "20",
+      "name": "iRobot Roomba 694 Robot Vacuum",
+      "category_id": 7,
+      "attributes": [
+        {
+          "code": "Battery Life",
+          "value": "90 minutes"
+        },
+        {
+          "code": "Smart Features",
+          "value": "Wi-Fi enabled"
+        },
+        {
+          "code": "Cleaning System",
+          "value": "3-Stage Cleaning"
+        }
+      ],
+      "price": 279,
+      "image_url": "https://images.unsplash.com/photo-1527515673510-8aa78ce21f9b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "iRobot Roomba 694 Robot Vacuum features a powerful 3-Stage Cleaning System and Wi-Fi capabilities, offering effortless cleaning.",
+      "last_modified": 1742914649999
     }
   ]
 }

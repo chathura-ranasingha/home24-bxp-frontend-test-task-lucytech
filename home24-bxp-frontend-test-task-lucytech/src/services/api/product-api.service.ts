@@ -21,3 +21,7 @@ export const getProductsApi = (
 export const updateProductApi = (product: any) => {
   return axiosInstance.put(`/products/${product.id}`, product);
 };
+
+export const getLastModifiedProductApi = async () => {
+  return axiosInstance.get("/products?_sort=last_modified&_order=desc");
+};

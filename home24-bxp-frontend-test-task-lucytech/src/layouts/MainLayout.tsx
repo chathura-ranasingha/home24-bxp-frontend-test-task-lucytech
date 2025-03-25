@@ -3,7 +3,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import AppSwitch from "../components/ui/app-switch-component";
 import AppConfigProvider from "../components/ui/app-config-provider-component";
 import AppLayout from "../components/ui/app-layout-component";
-import Avatar from "../components/ui/app-button-component";
+
 import Button from "../components/ui/app-button-component";
 import Dropdown from "../components/ui/app-dropdown-component";
 import { Menu } from "../components/ui/app-menu-component";
@@ -11,9 +11,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store";
 import { logoutUser } from "../store/slices/authSlice";
 import { useNavigate } from "react-router-dom";
-
 import { DEFAULT_i18_NAMESPACE } from "../constant/constant";
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -40,6 +40,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     navigate("/login");
   };
 
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
   const menu = (
     <Menu>
       <Menu.Item>
@@ -50,79 +55,115 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           {t("Logout")}
         </Button>
       </Menu.Item>
-      <Menu.Item>
-        <AppSwitch
-          checked={theme.name === "dark"}
-          onChange={toggleTheme}
-          checkedChildren="Dark"
-          unCheckedChildren="Light"
-        />
+    </Menu>
+  );
+
+  const languageMenu = (
+    <Menu>
+      <Menu.Item onClick={() => handleLanguageChange("enUs")}>
+        English
+      </Menu.Item>
+      <Menu.Item onClick={() => handleLanguageChange("gerGer")}>
+        German
       </Menu.Item>
     </Menu>
   );
 
   return (
     <AppConfigProvider theme={{ token: theme.token }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginTop: 0,
-          marginBottom: 0,
-        }}
-      >
+      <div>
         <div
           style={{
-            display: "block",
-            alignItems: "center",
-            gap: "10px",
-            marginRight: 120,
+            display: "flex",
+            justifyContent: "flex-end",
+            marginTop: 0,
+            marginBottom: 0,
           }}
         >
-          {user && (
-            <Dropdown overlay={menu} trigger={["click"]}>
-              <Avatar size="large" style={{ cursor: "pointer" }}>
-                {user?.email[0].toUpperCase()}{" "}
-              </Avatar>
-            </Dropdown>
-          )}
-        </div>
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          top: 20,
-          left: "50%",
-          transform: "translateX(-50%)",
-          fontSize: "24px",
-          fontWeight: "bold",
-        }}
-      >
-        {t("siteTitle")}
-      </div>
-
-      <div style={{ marginBottom: 0, marginTop: 0 }}>
-        <AppLayout
-          headerContent={
+          <div
+            style={{
+              position: "relative",
+            }}
+          >
             <div
               style={{
-                top: 0,
-                right: 50,
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
               }}
-            ></div>
-          }
-          contentStyle={{
-            background: theme.token.colorBgBase,
-            color: theme.token.colorTextBase,
-            display: "block",
+            >
+              {user && (
+                <Dropdown overlay={menu} trigger={["click"]}>
+                  <div style={{ cursor: "pointer" }}>
+                    <img
+                      src={user?.profile_pic || "/path/to/default/image.jpg"}
+                      alt="profile"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                </Dropdown>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minHeight: "100vh",
+            marginTop: 20,
+            fontSize: "24px",
+            fontWeight: "bold",
+            width: "100%",
           }}
         >
-          {children}
-        </AppLayout>
+          <div style={{ marginRight: "20px" }}>{t("siteTitle")}</div>
+
+          <Dropdown overlay={languageMenu} trigger={["click"]}>
+            <Button style={{ marginRight: "20px" }}>
+              {t("Select Language")}
+            </Button>
+          </Dropdown>
+
+          <AppSwitch
+            checked={theme.name === "dark"}
+            onChange={toggleTheme}
+            checkedChildren="Dark"
+            unCheckedChildren="Light"
+          />
+        </div>
+
+        <div>
+          <AppLayout
+            headerContent={
+              <div
+                style={{
+                  top: 0,
+                  right: 50,
+                }}
+              ></div>
+            }
+            contentStyle={{
+              background: theme.token.colorBgBase,
+              color: theme.token.colorTextBase,
+              display: "block",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "100vh",
+            }}
+          >
+            {children}
+          </AppLayout>
+        </div>
       </div>
     </AppConfigProvider>
   );
